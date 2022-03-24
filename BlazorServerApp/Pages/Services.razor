@@ -1,0 +1,15 @@
+﻿@page "/Services"
+
+<h3>Services</h3>
+
+Text File Output = @_textFileOutput;
+
+@code {
+    private string? _textFileOutput;
+
+    protected override void OnInitialized()
+    {
+         _textFileOutput = System.IO.File.ReadAllText(@"C:\test\Test.txt");
+    }
+
+}
